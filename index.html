@@ -7,6 +7,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root {
@@ -22,11 +23,25 @@
       color: var(--dark);
     }
 
-    header {
+    header, nav {
       background: linear-gradient(to bottom, #a7cfc2, #93beb2);
-      padding: 40px 20px;
+      padding: 20px;
       text-align: center;
-      position: relative;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 10px 0 0;
+    }
+
+    nav ul li a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: bold;
     }
 
     header h1 {
@@ -34,28 +49,20 @@
       font-family: 'Playfair Display', serif;
       font-size: 42px;
       color: var(--gold);
-      letter-spacing: 1px;
-    }
-
-    header p {
-      margin-top: 8px;
-      font-size: 18px;
-      color: var(--gold);
-      font-style: italic;
     }
 
     .gold-line {
       width: 100px;
       height: 3px;
       background-color: var(--gold);
-      margin: 20px auto 0;
+      margin: 10px auto;
       border-radius: 2px;
     }
 
     .container {
       max-width: 1000px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 30px 20px;
     }
 
     .product-image {
@@ -69,103 +76,179 @@
     }
 
     .product-image:hover {
-      transform: scale(1.03);
+      transform: scale(1.05);
     }
 
-    .description h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 30px;
-      color: var(--gold);
-      text-align: center;
-      margin-bottom: 20px;
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeIn 1s ease-in-out forwards;
     }
 
-    .description p {
-      font-size: 18px;
-      line-height: 1.8;
-      margin-bottom: 18px;
-      text-align: justify;
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    .description strong {
-      color: #444;
+    .ingredient-box {
+      background-color: #fff8ec;
+      border: 1px solid #f0e6d2;
+      padding: 20px;
+      border-radius: 10px;
+      width: 48%;
+      margin: 1%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
     }
 
-    .highlight {
-      text-align: center;
-      font-style: italic;
-      margin-top: 40px;
-      font-size: 19px;
+    .ingredient-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .ingredients-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     footer {
       text-align: center;
-      padding: 20px 10px;
+      padding: 30px 10px;
       font-size: 14px;
       color: #aaa;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 32px;
-      }
+    .social-icons a {
+      margin: 0 10px;
+      color: var(--gold);
+      font-size: 20px;
+    }
 
-      .description h2 {
-        font-size: 24px;
-      }
+    .cta-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 20px;
+      background-color: #fffaf2;
+    }
 
-      .container {
-        padding: 30px 15px;
-      }
+    .cta-box {
+      flex: 1;
+      min-width: 280px;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .cta-box a,
+    .cta-box button {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #d3a437;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      box-sizing: border-box;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>LUME</h1>
     <p>Let your skin glow ✨</p>
     <div class="gold-line"></div>
+    <nav>
+      <ul>
+        <li><a href="#about">Naša priča</a></li>
+        <li><a href="#ingredients">Sastojci</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <div class="container">
-    <!-- Slika proizvoda -->
-    <img src="ChatGPT Image Jul 28, 2025, 04_04_43 PM.png" alt="LUME body scrub" class="product-image" />
-
-    <!-- Opis -->
-    <div class="description">
-      <h2>🌿 Šta čini LUME L'Or Vanille tako posebnim?</h2>
-
-      <p>
-        Uronite u luksuzni svet nege sa <strong>L'Or Vanille</strong> pilingom, osmišljenim da vašu kožu probudi, nahrani i obasja – baš kao što zaslužuje.
-      </p>
-
-      <p><strong>🍬 Šećer – Slatki dodir prirode:</strong> Nežna, ali moćna zrnca šećera nežno uklanjaju mrtve ćelije kože, ostavljajući je svilenkastom i glatkom poput najfinijeg kašmira.</p>
-
-      <p><strong>🌊 Morska so – Mineralni eliksir iz dubina:</strong> Obogaćena prirodnim mineralima, morska so pročišćava pore i podstiče cirkulaciju – osećaćete se kao posle dana u luksuznom spa centru.</p>
-
-      <p><strong>🫒 Maslinovo ulje – Zlatna kap hranljivosti:</strong> Dubinski hidrira i obnavlja kožu, čineći je elastičnom, mekom i nežno zaštićenom.</p>
-
-      <p><strong>💜 Eterično ulje lavande – Harmonija za čula:</strong> Umirujući miris lavande ne samo da opušta duh, već i njeguje kožu zahvaljujući svojim prirodnim antiseptičkim svojstvima.</p>
-
-      <p><strong>🍦 Ekstrakt vanile – Slatka nota luksuza:</strong> Ova raskošna aroma budi osećaj topline i blagostanja, dok antioksidansi iz vanile pomažu koži da zablista zdravim sjajem.</p>
-
-      <p><strong>🍯 Med – Zlatna kapljica mekoće:</strong> Poznat po svojim antibakterijskim i omekšavajućim svojstvima, med pretvara svaki dodir u čistu slast i negu.</p>
-
-      <p><strong>💛 Vitamin E – Čuvar mladolikosti:</strong> Moćan antioksidans koji štiti ćelije od oštećenja, smanjuje upale i ostavlja kožu glatkom i zaštićenom.</p>
-
-      <p><strong>✨ Skvalan – Tajna svilenkaste teksture:</strong> Zaključava vlagu, omekšava teksturu i daje koži neodoljiv sjaj.</p>
-
-      <p class="highlight">
-        L'Or Vanille nije samo piling – to je ritual. Trenutak za vas. Za vaše telo. I za vašu dušu.<br />
-        ✨ <strong>Let your skin glow – jer vi to zaslužujete.</strong>
-      </p>
+  <section id="about" class="fade-in" style="margin-top: -30px;">
+    <div class="container">
+      <h2 style="text-align:center; color: var(--gold); font-family: 'Playfair Display';">Naša priča</h2>
+      <p style="text-align: center; max-width: 800px; margin: auto;">Verujemo da prava nega dolazi iz prirode. LUME proizvodi nastaju ručno, pažljivo i sa ljubavlju, uz upotrebu najčistijih sastojaka. Naša misija je jednostavna – da vaša koža zablista zdravim sjajem, uz luksuzno iskustvo koje zaslužujete.</p>
     </div>
+  </section>
+
+  <img src="ChatGPT Image Jul 28, 2025, 04_04_43 PM.png" alt="LUME body scrub" class="product-image fade-in" />
+
+<section id="ingredients" class="ingredients-section fade-in">
+  <h2 class="ingredients-title" style="text-align: center; color: var(--gold); font-family: 'Playfair Display'; margin-bottom: 40px;">
+    Sastojci
+  </h2>
+  <div class="ingredients-grid" style="
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-items: center;
+  ">
+    <div class="ingredient-box" style="width: 90%; max-width: 420px;"><h3>Šećer</h3><p>Nežno uklanja mrtve ćelije i ostavlja kožu svilenkastom.</p></div>
+    <div class="ingredient-box" style="width: 90%; max-width: 420px;"><h3>Morska so</h3><p>Mineralni eliksir koji pročišćava i osvežava.</p></div>
+    <div class="ingredient-box" style="width: 90%; max-width: 420px;"><h3>Maslinovo ulje</h3><p>Dubinska hidratacija i prirodna obnova kože.</p></div>
+    <div class="ingredient-box" style="width: 90%; max-width: 420px;"><h3>Lavanda</h3><p>Umiruje čula i kožu, pružajući osećaj mira.</p></div>
+    <div class="ingredient-box" style="width: 90%; max-width: 420px;"><h3>Vanila</h3><p>Slatka nota luksuza sa antioksidantnim efektima.</p></div>
+    <div class="ingredient-box" style="width: 90%; max-width: 420px;"><h3>Med</h3><p>Antibakterijsko dejstvo i mekoća u jednoj kapljici.</p></div>
+    <div class="ingredient-box" style="width: 90%; max-width: 420px;"><h3>Vitamin E</h3><p>Čuva mladalački izgled i štiti kožu.</p></div>
+    <div class="ingredient-box" style="width: 90%; max-width: 420px;"><h3>Skvalan</h3><p>Zaključava vlagu i daje neodoljiv sjaj.</p></div>
   </div>
+</section>
+
+
+
+
+  <section id="kontakt" class="cta-container fade-in">
+    <div class="cta-box">
+      <h2 style="font-family: 'Playfair Display', serif; color: var(--dark); font-size: 24px;">Zainteresovani?</h2>
+      <p style="font-size: 18px;">Kontaktirajte nas direktno za porudžbine ili više informacija.</p>
+      <a href="https://www.instagram.com/lumebodyscrub" target="_blank">Pošalji poruku na Instagram</a>
+    </div>
+    <div class="cta-box">
+      <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+        <label for="name">Vaše ime</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email adresa</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Poruka</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Pošalji poruku</button>
+      </form>
+    </div>
+  </section>
 
   <footer>
-    © 2025 LUME Skincare. All rights reserved.
+    <p>© 2025 LUME Skincare. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/lumebodyscrub" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
   </footer>
-
 </body>
 </html>
