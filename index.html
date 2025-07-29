@@ -168,6 +168,78 @@
       border-radius: 4px;
       font-size: 16px;
       box-sizing: border-box;
+      /* Mobilni uređaji - do 768px */
+@media (max-width: 768px) {
+  .ingredients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .ingredient-box img {
+    width: 100%;
+    height: auto;
+  }
+
+  .cta-container,
+  .reviews-section,
+  .recenzije-section,
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cta-box,
+  .review-box,
+  .form-box,
+  .about-content,
+  .image-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .product-image {
+    width: 100%;
+    max-width: 280px;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .recenzije-section form {
+    width: 100%;
+  }
+
+  .rating-stars {
+    justify-content: center;
+  }
+
+  .reviews-section > div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-section {
+    flex-direction: column-reverse;
+    padding: 40px 20px;
+  }
+
+  .galerija-section img {
+    width: 100% !important;
+    max-width: 300px;
+  }
+
+  .usporedba-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .usporedba-box img {
+    width: 80px;
+    height: auto;
+  }
+}
+
     }
   </style>
 </head>
