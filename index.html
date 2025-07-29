@@ -280,25 +280,73 @@ nav ul li a {
   font-weight: bold;
   font-size: 16px;
 }
+.site-header {
+  background: linear-gradient(to bottom, #a7cfc2, #93beb2);
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  color: var(--gold);
+}
+
+.site-header .subtitle {
+  color: var(--gold);
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.gold-line {
+  width: 100px;
+  height: 3px;
+  background-color: var(--gold);
+  margin: 16px auto;
+  border-radius: 2px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+nav ul li a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: white;
+}
 
   </style>
 </head>
 <body>
-  <header>
-    <h1>LUME</h1>
-    <p style="color: #d3a437;">Let your skin glow ✨</p>
+  <header class="site-header">
+  <h1>LUME</h1>
+  <p class="subtitle">Let your skin glow ✨</p>
 
-    <div class="gold-line"></div>
-    <nav>
-      <ul>
-        <li><a href="#about">Naša priča</a></li>
-        <li><a href="#ingredients">Sastojci</a></li>
-        <li><a href="#upotreba">LUME u svakodnevnoj rutini</a></li>
-        <li><a href="#recenzije">Recenzije</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="gold-line"></div>
+  <nav>
+    <ul>
+      <li><a href="#about">Naša priča</a></li>
+      <li><a href="#ingredients">Sastojci</a></li>
+      <li><a href="#upotreba">LUME u svakodnevnoj rutini</a></li>
+      <li><a href="#recenzije">Recenzije</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
 
   <section id="about" class="fade-in" style="margin-top: -30px; padding: 60px 20px;">
   <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; max-width: 1200px; margin: auto;">
