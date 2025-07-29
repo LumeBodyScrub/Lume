@@ -181,6 +181,8 @@
       <ul>
         <li><a href="#about">Naša priča</a></li>
         <li><a href="#ingredients">Sastojci</a></li>
+        <li><a href="#upotreba">LUME u svakodnevnoj rutini</a></li>
+        <li><a href="#recenzije">Recenzije</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </nav>
@@ -347,15 +349,15 @@
 
   </div>
 </section>
-<section style="background-color: #fdf8f3; padding: 60px 20px;">
-  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; max-width: 1200px; margin: auto;">
+<section id="upotreba" style="background-color: #fdf8f3; padding: 60px 20px;">
+  <div style="display: flex; flex-wrap: wrap; justify-content : center; align-items : 40px; max-width: 1200px; margin: auto;">
     
     <!-- Slika levo -->
     <div style="flex: 1; min-width: 300px; text-align: center;">
       <img 
-        src="images/galerija/upotreba1.jpg" 
+        src="C:\Users\Admin\Desktop\lume-website\slike\proizvod\ChatGPT Image Jul 29, 2025, 04_57_12 PM.png"
         alt="Upotreba LUME" 
-        style="max-width: 100%; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
+        style="max-width: 50%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
       />
     </div>
 
@@ -378,7 +380,7 @@
   </div>
 </section>
 <section>
-  <section id="why-lume" class="fade-in" style="background-color: #fdf8f3; padding: 60px 20px;">
+  <section id="zaštolume" class="fade-in" style="background-color: #fdf8f3; padding: 60px 20px;">
   <h2 style="text-align: center; color: var(--gold); font-family: 'Playfair Display'; font-size: 30px; margin-bottom: 40px;">
     Zašto odabrati LUME?
   </h2>
@@ -407,8 +409,6 @@
     </div>
   </div>
 </section>
-
-
 
 </section>
 
@@ -458,80 +458,78 @@
     </div>
   </div>
 
-  <section id="recenzije" style="background-color: #f0f1fd; padding: 60px 20px;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 40px; max-width: 1200px; margin: 0 auto;">
+  <section id="recenzije" style="
+  background: url('slike/proizvod/test1.png') no-repeat center center / cover;
+  padding: 60px 20px;
+  position: relative;
+">
+  <!-- Tamni overlay da tekst bude čitljiv -->
+  <div style="background-color: rgba(255, 255, 255, 0.247); padding: 40px; border-radius: 12px; max-width: 1200px; margin: auto;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 40px;">
 
-    <!-- Leva strana: naslov i zvezdice -->
-    <div style="flex: 1 1 400px;">
-      <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; color: var(--dark); margin-bottom: 20px;">
-        Vaša recenzija
-      </h2>
-      <div class="rating-stars" id="star-container" style="font-size: 32px; cursor: pointer; display: flex; gap: 8px;">
-        <span class="star" data-value="1">&#9733;</span>
-        <span class="star" data-value="2">&#9733;</span>
-        <span class="star" data-value="3">&#9733;</span>
-        <span class="star" data-value="4">&#9733;</span>
-        <span class="star" data-value="5">&#9733;</span>
+      <!-- Leva strana: naslov i zvezdice -->
+      <div style="flex: 1 1 400px;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; color: var(--dark); margin-bottom: 20px;">
+          Vaša recenzija
+        </h2>
+        <div class="rating-stars" id="star-container" style="font-size: 32px; cursor: pointer; display: flex; gap: 8px;">
+          <span class="star" data-value="1">&#9733;</span>
+          <span class="star" data-value="2">&#9733;</span>
+          <span class="star" data-value="3">&#9733;</span>
+          <span class="star" data-value="4">&#9733;</span>
+          <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <input type="hidden" name="ocena" id="ocena" form="review-form">
       </div>
-      <!-- Sakriven input da se šalje ocena -->
-      <input type="hidden" name="ocena" id="ocena" form="review-form">
+
+      <!-- Desna strana: forma -->
+      <div style="flex: 1 1 400px; background: rgba(255, 255, 255, 0); padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <form id="review-form" action="https://formspree.io/f/mblkywrb" method="POST">
+          <label for="ime">Vaše ime</label>
+          <input type="text" id="ime" name="ime" required style="width: 100%; padding: 10px; margin-bottom: 15px;">
+
+          <label for="komentar">Vaš komentar</label>
+          <textarea id="komentar" name="komentar" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea>
+
+          <button type="submit" style="padding: 10px 20px; background: var(--gold); color: white; border: none; border-radius: 6px; cursor: pointer;">Pošalji</button>
+        </form>
+      </div>
+
     </div>
-
-    <!-- Desna strana: forma -->
-    <div style="flex: 1 1 400px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-      <form id="review-form" action="https://formspree.io/f/mblkywrb" method="POST">
-        <label for="ime">Vaše ime</label>
-        <input type="text" id="ime" name="ime" required style="width: 100%; padding: 10px; margin-bottom: 15px;">
-
-        <label for="komentar">Vaš komentar</label>
-        <textarea id="komentar" name="komentar" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea>
-
-        <button type="submit" style="padding: 10px 20px; background: var(--gold); color: white; border: none; border-radius: 6px; cursor: pointer;">Pošalji</button>
-      </form>
-    </div>
-
   </div>
 </section>
 
-<!-- CSS za zvezdice -->
-<style>
-  .rating-stars .star {
-    color: #ccc;
-    transition: color 0.2s;
-  }
-  .rating-stars .star.hovered,
-  .rating-stars .star.selected {
-    color: gold;
-  }
-</style>
-
-<!-- JavaScript za zvezdice -->
+<!-- Dodaj skriptu za hover zvezdica -->
 <script>
-  const stars = document.querySelectorAll('.rating-stars .star');
-  const ocenaInput = document.getElementById('ocena');
-  let selectedRating = 0;
+  const stars = document.querySelectorAll('.star');
+  const hiddenInput = document.getElementById('ocena');
 
   stars.forEach((star, index) => {
     star.addEventListener('mouseover', () => {
-      stars.forEach((s, i) => {
-        s.classList.toggle('hovered', i <= index);
-      });
+      for (let i = 0; i <= index; i++) {
+        stars[i].style.color = 'gold';
+      }
+      for (let i = index + 1; i < stars.length; i++) {
+        stars[i].style.color = 'gray';
+      }
     });
 
     star.addEventListener('mouseout', () => {
-      stars.forEach((s, i) => {
-        s.classList.toggle('hovered', i < selectedRating);
-      });
+      stars.forEach(s => s.style.color = 'gray');
+      if (hiddenInput.value) {
+        for (let i = 0; i < hiddenInput.value; i++) {
+          stars[i].style.color = 'gold';
+        }
+      }
     });
 
     star.addEventListener('click', () => {
-      selectedRating = index + 1;
-      ocenaInput.value = selectedRating;
-      stars.forEach((s, i) => {
-        s.classList.toggle('selected', i < selectedRating);
-      });
+      hiddenInput.value = star.dataset.value;
     });
   });
+
+  // Inicijalno sive zvezdice
+  stars.forEach(s => s.style.color = 'gray');
 </script>
 
 
